@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div>
+    <span>Select the course : </span>
+    <select id="ddlView">
+        <option value="0">Select</option>
+        <option value="1">Java Script</option>
+        <option value="2">CSS</option>
+        <option value="3">JQuery</option>
+        <option value="3">HTML</option>
+        <option value="3">C#</option>
+    </select>
+</div>
+<br >
+<input type="button" class="btn" value="Submit" id="btnSubmit" onclick="ddlValidate();" />
+  </body>
+</html>
+<script type="text/javascript">
+    function ddlValidate() {
+        var e = document.getElementById("ddlView");
+        var optionSelIndex = e.options[e.selectedIndex].value;
+        var optionSelectedText = e.options[e.selectedIndex].text;
+        if (optionSelIndex == 0) {
+            alert("Please select a Course");
+        }
+        else {
+            alert("Success !! You have selected Course : " + optionSelectedText); ;
+        }
+    }
+</script>
